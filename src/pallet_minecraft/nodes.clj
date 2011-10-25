@@ -9,5 +9,7 @@
   {:inbound-ports [25565 22]} ;; 25565 for minecraft, 22 for SSH
   :bootstrap (resource/phase
               (crates/bootstrap))
-  :stuff (resource/phase
-          (crates/stuff)))
+  :install (resource/phase
+          (crates/install-minecraft))
+  :start (resource/phase
+          (crates/start-minecraft)))

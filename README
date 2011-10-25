@@ -1,13 +1,11 @@
 # pallet-minecraft
 
-FIXME: write description
+pallet config for setting up minecraft
 
 ## Usage
 
-FIXME: write
+lein pallet converge pallet-minecraft.nodes/minecraft 1 :install :start
 
 ## License
 
-Copyright (C) 2011 FIXME
-
-Distributed under the Eclipse Public License, the same as Clojure.
+...
