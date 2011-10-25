@@ -8,4 +8,6 @@
   "A minecraft node"
   {:inbound-ports [25565 22]} ;; 25565 for minecraft, 22 for SSH
   :bootstrap (resource/phase
-              (crates/bootstrap)))
+              (crates/bootstrap))
+  :stuff (resource/phase
+          (crates/stuff)))
