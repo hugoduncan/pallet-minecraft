@@ -15,10 +15,6 @@
        (automated-admin-user/automated-admin-user)
        (java/java :openjdk)))
 
-(script/defscript downloadminecraft []) 
-(pallet.stevedore/defimpl downloadminecraft :default [& args] 
-  (wget "https://s3.amazonaws.com/MinecraftDownload/launcher/minecraft_server.jar")) 
-
 (def minecraft-path "/opt/minecraft")
 
 (defn install-minecraft
