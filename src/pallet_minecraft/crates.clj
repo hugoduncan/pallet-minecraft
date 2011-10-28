@@ -33,4 +33,10 @@
       (exec-script/exec-script
        (do
          (cd ~minecraft-path)
-         (nohup java -jar minecraft_server.jar &)))))
+         (nohup java -Xmx512m -Xms512m -jar minecraft_server.jar &)))))
+
+(defn stop-minecraft
+  [req]
+  (-> req
+   (exec-script/exec-script
+    (pkill -f minecraft))))
