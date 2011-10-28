@@ -6,7 +6,7 @@
 
 (def minecraft
   (pallet.core/group-spec
-    "minecraft"
+    "minecraft-group"
     :phases {:bootstrap (resource/phase
                          (crates/bootstrap))
              :install (resource/phase
