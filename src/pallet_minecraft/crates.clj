@@ -1,7 +1,5 @@
 (ns pallet-minecraft.crates
   (:require
-   [pallet.stevedore :as stevedore]
-   [pallet.script :as script]
    [pallet.action.exec-script :as exec-script]
    [pallet.crate.automated-admin-user :as automated-admin-user]
    [pallet.action.remote-file :as remote-file]
@@ -11,7 +9,7 @@
 
 (defn bootstrap
   [req]
-  ( -> req
+  (-> req
        (automated-admin-user/automated-admin-user)
        (java/java :openjdk)))
 
@@ -23,9 +21,8 @@
       (directory/directory                     
        minecraft-path                           
        :mode "0770" :owner "root" :group "root")
-      (remote-file/remote-file (str minecraft-path "/"  "minecraft_server.jar")
-                               :url "https://s3.amazonaws.com/MinecraftDownload/launcher/minecraft_server.jar")
-      ))
+      (remote-file/remote-file (str minecraft-path "/" "minecraft_server.jar")
+                               :url "https://s3.amazonaws.com/MinecraftDownload/launcher/minecraft_server.jar")))
 
 (defn start-minecraft
   [req]
