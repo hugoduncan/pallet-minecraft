@@ -1,19 +1,20 @@
 (ns pallet-minecraft.nodes
   (:require
    [pallet.core :as core]
+   [pallet.phase :as phase]
    [pallet.resource :as resource]
    [pallet-minecraft.crates :as crates]))
 
 (def minecraft
   (pallet.core/group-spec
     "minecraft-group"
-    :phases {:bootstrap (resource/phase
+    :phases {:bootstrap (phase/phase-fn
                          (crates/bootstrap))
-             :install (resource/phase
+             :install (phase/phase-fn
                        (crates/install-minecraft))
-             :start (resource/phase
+             :start (phase/phase-fn
                      (crates/start-minecraft))
-             :stop (resource/phase
+             :stop (phase/phase-fn
                     (crates/stop-minecraft))}
     :node-spec (pallet.core/node-spec
                 :image {:os-family :ubuntu :os-version-matches "10.10"}
