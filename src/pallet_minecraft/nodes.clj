@@ -17,5 +17,4 @@
              :stop (phase/phase-fn
                     (crates/stop-minecraft))}
     :node-spec (pallet.core/node-spec
-                :hardware {:min-ram 1024}
                 :network {:inbound-ports [22 25565]})))

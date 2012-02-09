@@ -30,7 +30,7 @@
       (exec-script/exec-script
        (do
          (cd ~minecraft-path)
-         (nohup java -Xmx512m -Xms512m -jar minecraft_server.jar &)))))
+         (nohup java -Xmx256m -Xms256m -jar minecraft_server.jar &)))))
 
 (defn stop-minecraft
   [req]
