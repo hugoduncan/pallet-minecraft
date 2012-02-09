@@ -1,6 +1,6 @@
 (defproject pallet-minecraft "1.0.0-SNAPSHOT"
   :description "minecraft with pallet"
-  :dependencies [[org.cloudhoist/pallet "0.6.6"]
+  :dependencies [[org.cloudhoist/pallet "0.6.7"]
                  [org.cloudhoist/pallet-crates-all "0.5.0"]
                  [org.jclouds.provider/serverlove-z1-man "1.2.1"]
                  [org.jclouds.provider/aws-ec2 "1.2.1"]
