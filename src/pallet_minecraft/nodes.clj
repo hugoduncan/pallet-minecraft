@@ -2,7 +2,6 @@
   (:require
    [pallet.core :as core]
    [pallet.phase :as phase]
-   [pallet.resource :as resource]
    [pallet-minecraft.crates :as crates]))
 
 (def minecraft
